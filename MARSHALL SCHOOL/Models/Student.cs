@@ -12,7 +12,7 @@
         public string Address { get; set; }
         public string Phone { get; set; }
         public int Standard { get; set; }
-        public string Teacher { get; set; }
+        public string Teacher2 { get; set; }
 
     }
 }
