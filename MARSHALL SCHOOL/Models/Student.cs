@@ -10,8 +10,9 @@
         public string FatherName { get; set; }
         public string MotherName { get; set; }
         public string Address { get; set; }
-        public string MobileNumber { get; set; }
+        public string Phone { get; set; }
         public int Standard { get; set; }
+        public string Teacher { get; set; }
 
     }
 }
