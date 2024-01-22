@@ -11,7 +11,7 @@
         public string MotherName { get; set; }
         public string Address { get; set; }
         public string MobileNumber { get; set; }
-        public int Class { get; set; }
+        public int Standard { get; set; }
 
     }
 }
