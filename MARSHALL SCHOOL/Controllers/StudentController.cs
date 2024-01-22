@@ -8,11 +8,11 @@ namespace MARSHALL_SCHOOL.Controllers
     [ApiController]
     public class StudentController : ControllerBase
     {
-        StudentRepository stdRepo = new StudentRepository();
+        StudentRepository stdRepository = new StudentRepository();
         [HttpGet]
         public IActionResult GetS()
         {
-            var students = stdRepo.GetAllStudents();
+            var students = stdRepository.GetAllStudents();
             return Ok(students);
             
         }
@@ -20,7 +20,7 @@ namespace MARSHALL_SCHOOL.Controllers
         public IActionResult GetStudentbyid(int Id)
 
         {
-            var students = stdRepo.GetAllStudents();
+            var students = stdRepository.GetAllStudents();
             var student = students.FirstOrDefault(s => s.Id == Id);
             if(student == null)
             {
@@ -32,7 +32,7 @@ namespace MARSHALL_SCHOOL.Controllers
         public IActionResult CreateStudent(Student student)
         {
 
-            var std = stdRepo.CreateStudent(student);
+            var std = stdRepository.CreateStudent(student);
             if(std == null)
             {
                 return BadRequest("Unable to create Students");
@@ -44,7 +44,7 @@ namespace MARSHALL_SCHOOL.Controllers
 
         [HttpDelete]
         public IActionResult DeleteStudent(int Id) {
-            var res = stdRepo.RemoveStudent(Id);
+            var res = stdRepository.RemoveStudent(Id);
             if(res == 0)
             {
                 return NotFound("There are no stunts to delete!");
