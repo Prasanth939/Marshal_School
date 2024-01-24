@@ -1,7 +1,7 @@
 ﻿
 namespace MARSHALL_SCHOOL.Models
 {
-    public  class StudentRepository
+    public class StudentRepository
     {
         static List<Student> students = new List<Student>()
         {
@@ -99,4 +99,5 @@ namespace MARSHALL_SCHOOL.Models
 
     }
 }
-    
+
+
